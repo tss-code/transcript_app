@@ -6,7 +6,7 @@ class BlocHomePage {
   BlocHomePage();
 
   final StreamController<TranscriptType> _transcriptTypeStreamController =
-      StreamController<TranscriptType>();
+      StreamController<TranscriptType>.broadcast();
   Stream<TranscriptType> get transcriptTypeStream =>
       _transcriptTypeStreamController.stream;
   Sink<TranscriptType> get transcriptTypeSink =>
